@@ -1,40 +1,62 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> | 
-      <router-link to="/register">Register</router-link> |
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/instruction">Instruction</router-link> |
-      <router-link to="/about">About</router-link>
+      <ul>
+      
+      <li><router-link to="/">Home</router-link></li> 
+      <li><router-link to="/login">Sign&nbsp;up/Login</router-link></li> 
+      <li><router-link to="/instruction">Instruction</router-link></li>  
+      <li><router-link to="/about">About</router-link></li>
+      
+     </ul>
     </div>
     <router-view />
-  </div>
+
+    </div>
 </template>
 
 <style lang="scss">
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 7px;
+}
 #app {
+ 
+  position:absolute;
+  top: 12%;
+  left: 22%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align:center;
-  color: #000000;
+  color:white;
 }
 
 #nav {
-  padding: 20px;
+  position:fixed;
+  padding: 10px;
+  bottom: 92%;
+  left:39%;
 
   a {
+    text-decoration: none;
     font-weight: bold;
-    color:black;
+    color:white;
 
     &.router-link-exact-active {
-      color:rgb(177, 177, 43);
+      color:rgb(223, 90, 1);
     }
   }
   text-decoration: none;
   a:hover{
-    position: relative;
-    font-size: 20px;
+    position:relative;
+    font-size: 24px;
+    color:rgb(223, 90, 1);
   }
 }
 </style>
