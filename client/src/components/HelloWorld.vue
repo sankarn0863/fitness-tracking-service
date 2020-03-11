@@ -9,10 +9,10 @@
         <ul>
       <li>
         <a
-          href="https://github.com/venu-naredla/PROJECT"
+          href="https://mail.google.com/"
           target="_blank"
           rel="noopener"
-          >Blog</a
+          > <i class="fa fa-envelope"></i>&nbsp;Mail</a
         >
       </li>
       <li>
@@ -20,36 +20,41 @@
           href="https://github.com/venu-naredla/PROJECT"
           target="_blank"
           rel="noopener"
-          >Contact</a
+          ><i class="fa fa-github"></i>&nbsp;GitHub</a
         >
       </li>
       <li>
         <a
-          href="https://github.com/venu-naredla/PROJECT"
+          href="https://github.com/venu-naredla/PROJECT/blob/fitnessapp/README.md"
           target="_blank"
           rel="noopener"
-          >Service</a
+          ><i class="fa fa-address-book"></i>&nbsp;Contact</a
         >
       </li>
       <li>
         <a
-          href="https://github.com/venu-naredla/PROJECT"
+          href="https://www.facebook.com/"
           target="_blank"
           rel="noopener"
-          >Info</a
+          ><i class="fa fa-globe"></i>&nbsp;Blog</a
         >
       </li>
     </ul>
   </div>
 </template>
 
-<script>
+<script >
 export default {
   name: "HelloWorld",
   props: {
     msg: String
   }
 };
+
+
+
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -64,12 +69,12 @@ ul {
   list-style-type: none;
   padding: 0;
   position: fixed;
-  top: 73%;
-  left:43.5%
+  top:75%;
+  left:40%
 }
 li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 a {
   text-decoration: none;

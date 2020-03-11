@@ -4,12 +4,12 @@
       <div class="overlay-container">
         <div class="overlay">
           <div class="overlay-left">
-            <h2>Welcome Back!</h2>
+            <h2>Hello USER!</h2>
             <p>Please login with your personal info</p>
             <button class="invert" id="signIn" @click="signUp = !signUp">Sign In</button>
           </div>
           <div class="overlay-right">
-            <h2>Hello, User!</h2>
+            <h2>Welcome Back!</h2>
             <p>Please enter your personal details</p>
             <button class="invert" id="signUp" @click="signUp = !signUp">Sign Up</button>
           </div>
@@ -76,7 +76,8 @@ article{
       left: -100%;
       height: 100%;
       width: 200%;
-      background-image:url(jog.jpg);
+      background-image:url(vlog.jpg);
+      background-size: cover;
       color: rgb(255, 255, 255);
       transform: translateX(0);
       transition: transform .5s ease-in-out;
@@ -171,13 +172,13 @@ article{
       overflow: hidden;
       &:focus {
         outline: none;
-        background-image:url(jog.jpg);
+        background-color: transparent;
       }
     }
   }
   .sign-in {
     left: 0;
-    z-index: 1;
+    z-index: 2;
   }
   .sign-up {
     left: 0;
@@ -221,4 +222,4 @@ article{
       z-index: 10;
     }
   }
-</style>
+  </style>
