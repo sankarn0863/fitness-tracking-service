@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 class="venu">{{ msg }}</h1>
     <p>
       Naredlav1 is designed to help you learn more so you can achieve more.<br />
        It goes beyond tracking steps and calories to offer actionable insights on everything from your running style to your heart rate
@@ -20,7 +20,7 @@
           href="https://github.com/venu-naredla/PROJECT"
           target="_blank"
           rel="noopener"
-          ><i class="fa fa-github"></i>&nbsp;GitHub</a
+          > <i class="fa fa-grav"></i>&nbsp;GitHub</a
         >
       </li>
       <li>
@@ -62,8 +62,9 @@ export default {
 h3 {
   margin: 40px 0 0;
   position: fixed;
-  top: 65%;
-  left: 44%;
+  top: 66%;
+  left: 46%;
+  font-size: 16px;
 }
 ul {
   list-style-type: none;
@@ -77,11 +78,29 @@ li {
   margin: 0 15px;
 }
 a {
+  position: relative;
   text-decoration: none;
   color:rgb(255, 255, 255);
+  right: 11%;
+  font-size: 16px;
 }
 hello{
   position:absolute;
   top: 60%;
 }
+
+p{
+  position: fixed;
+  top: 55%;
+  font-size: 17px;
+  left: 23%;
+}
+.venu{
+   position: fixed;
+  top: 46%;
+  font-size: 38px;
+  left: 28%;
+
+}
+
 </style>
