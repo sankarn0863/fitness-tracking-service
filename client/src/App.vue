@@ -5,18 +5,17 @@
       
       <li><router-link to="/">Home</router-link></li> 
       <li><router-link to="/login">Sign&nbsp;up/Login</router-link></li> 
-      <li><router-link to="/instruction">Instruction</router-link></li>  
+      <li><router-link to="/instruction">Instructor&nbsp;Blog</router-link></li>  
       <li><router-link to="/about">About</router-link></li>
       
      </ul>
     </div>
     <router-view />
-
     </div>
 </template>
 
 <style lang="scss">
-@import url('https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 ul {
   list-style-type: none;
@@ -31,7 +30,7 @@ li {
   position:absolute;
   top: 12%;
   left: 22%;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align:center;
@@ -41,8 +40,9 @@ li {
 #nav {
   position:fixed;
   padding: 10px;
-  bottom: 92%;
+  bottom: 94%;
   left:39%;
+
 
   a {
     text-decoration: none;
@@ -60,4 +60,5 @@ li {
     color:rgb(223, 90, 1);
   }
 }
+
 </style>
