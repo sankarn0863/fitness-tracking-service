@@ -1,11 +1,12 @@
 <template>
   <div class="home">
 
-    <img alt="Vue logo" src="../assets/logo.png"  width="200" height="auto">
+    <img class="ve" src="../assets/logo.png"  width="185" height="auto">
     <HelloWorld msg="Welcome to Naredlav1 Fitness Tracker App" />
   </div>
 </template>
 <script>
+
 
 import HelloWorld from "@/components/HelloWorld.vue";
 export default {
@@ -16,3 +17,11 @@ export default {
   }
 };
 </script>
+<style>
+.ve{
+  position: fixed;
+  left: 46%;
+  top: 15%;
+}
+
+</style>

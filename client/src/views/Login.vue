@@ -16,15 +16,19 @@
         </div>
       </div>
       <form class="sign-up" action="#">
-        <h2>Sign up for NaredlaV1</h2>
+        <h2>SIGN UP for NaredlaV1</h2>
         <div>Use your Email ID for registration</div>
         <input type="text" placeholder="Name" />
         <input type="email" placeholder="Email" />
+        <input type="text" placeholder="Age" />
+        <input type="text" placeholder="Sex" />
         <input type="password" placeholder="Password" />
+        
+        
         <button>Sign up</button>
       </form>
       <form class="sign-in" action="#">
-        <h2>Sign In</h2>
+        <h2>SIGN IN</h2>
         <div>Use your account</div>
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Password" />
@@ -46,11 +50,13 @@
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 article{
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;
+  font-size: 16px;
 }
   .container {
     position: relative;
@@ -107,6 +113,8 @@ article{
   }
   h2 {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
   }
   p {
     margin: 20px 0 30px;
@@ -150,8 +158,8 @@ article{
     justify-content: space-around;
     flex-direction: column;
     padding: 90px 60px;
-    width: calc(50% - 120px);
-    height: calc(100% - 180px);
+    width: calc(65.6% - 120px);
+    height: calc(100% - 0px);
     text-align: center;
     background: linear-gradient(to bottom, #fff7f7, rgb(117, 111, 111));
     transition: all .5s ease-in-out;
@@ -182,6 +190,7 @@ article{
   }
   .sign-up {
     left: 0;
+    top:-5%;
     z-index: 1;
     opacity: 0;
   }
