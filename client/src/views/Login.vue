@@ -1,4 +1,15 @@
 <template>
+<section>
+ <div id="nav">
+      <ul>
+      
+      <li><router-link to="/">Home</router-link></li> 
+      <li><router-link to="/login">Sign&nbsp;up/Login</router-link></li> 
+      <li><router-link to="/instruction">Instructor&nbsp;Blog</router-link></li>  
+      <li><router-link to="/about">About</router-link></li>
+      
+     </ul>
+    </div>
   <article>
     <div class="container" :class="{ 'sign-up-active': signUp }">
       <div class="overlay-container">
@@ -40,6 +51,7 @@
       </form>
     </div>
   </article>
+</section>
 </template>
 
 <script>
@@ -232,4 +244,5 @@ form {
     z-index: 10;
   }
 }
+
 </style>

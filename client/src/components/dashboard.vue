@@ -1,18 +1,13 @@
 <template>
 <section class="nav>">
-    <div class="tabs is-right">
-  <ul>
-    <li><a>Friends</a></li>
-    <li><a>Search</a></li>
-    <li><a>Request</a></li>
-    <li class="is-active"><a href="../">LOGOUT</a></li>
-  </ul>
-</div>
+ 
 <div class="profile">
+  <div class="columns">
+    <div class="column">
   <div class="card">
   <div class="card-image">
     <figure class="image is-4by3">
-      <img src="https://assets.thehansindia.com/hansindia-bucket/5044_1.jpg" width="auto" height="auto">
+      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/20431425_1397970180269314_4899126710301502793_n.jpg?_nc_cat=111&_nc_sid=05277f&_nc_ohc=zQQCohEram4AX9pztpj&_nc_ht=scontent-lga3-1.xx&oh=ebff52bc86a2d15f018a60c21798a5c5&oe=5E958E42" width="auto" height="auto">
     </figure>
   </div>
   <div class="card-content">
@@ -36,6 +31,168 @@
     </div>
   </div>
 </div>
+</div>
+  </div>
+  </div>
+  <div class="column">
+    <div class="m">
+    <article class="media">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <img src="../assets/venudp.jpg">
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <strong>Venu Naredla</strong> <small>@naredlav1</small> <small>15m</small>
+        <br>
+       Hello, this is my Front end of the Fitness Tracker Application, need to do the further development on server side.
+      </p>
+    </div>
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-reply"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-heart"></i></span>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div class="media-right">
+    <button class="delete"></button>
+  </div>
+</article>
+ <article class="media">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <img src="../assets/nitin.jpg">
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <strong>Prabhas</strong> <small>@nitinprabha</small> <small>15m</small>
+        <br>
+       Hey Dude, I'm busy with tapsee pannu and kajal aggarwal, will start working out soon buddy!
+      </p>
+    </div>
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-reply"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-heart"></i></span>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div class="media-right">
+    <button class="delete"></button>
+  </div>
+</article>
+ <article class="media">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <img src="../assets/dorydp.jpg">
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <strong>Md Dory Khan</strong> <small>@iamdorykhan</small> <small>15m</small>
+        <br>
+       Asalam valekum Prabhas and Venu Bhai!!
+      </p>
+    </div>
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-reply"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-heart"></i></span>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div class="media-right">
+    <button class="delete"></button>
+  </div>
+</article>
+ <article class="media">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <img src="../assets/venudp.jpg">
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <strong>Venu Naredla</strong> <small>@naredlav1</small> <small>15m</small>
+        <br>
+       Hi @nitinprabha, how are you brother?, howz the shoot going on by the way? Sahoo is a visual wonder brother keep it up!
+      </p>
+    </div>
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-reply"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-heart"></i></span>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div class="media-right">
+    <button class="delete"></button>
+  </div>
+</article>
+</div>
+</div>
+ <div class="tabs is-centered">
+  <ul>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-users" aria-hidden="true"></i></span>
+        <span>Friends</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-search" aria-hidden="true"></i></span>
+        <span>Search</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-comments" aria-hidden="true"></i></span>
+        <span>Messages</span>
+      </a>
+    </li>
+    <li class="is-active">
+      <a href="../">
+        <span class="icon is-small"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span>
+        <span>LOGOUT</span>
+      </a>
+    </li>
+  </ul>
 </div>
 <section class="naredla"> 
 
@@ -65,7 +222,7 @@
   <div class="control">
     <div class="select">
       <select>
-        <option>Morning Session</option>
+        <option><i class="fa fa-globe"></i>Morning Session</option>
         <option>Evening Session</option>
       </select>
     </div>
@@ -134,17 +291,23 @@
 }
 .nav{
   position: fixed;
-  padding-top: 5%;
+  padding-top: 1%;
 }
 .card{
   position: fixed;
-  top: -15%;
+  top: 15%;
   left: 70%;
-  padding-top: 15%;
-  padding-left:15%;
-  padding-bottom: 5%;
-  background: transparent;
+  border: dotted;
+  border-color:rgba(5, 3, 3, 0.308) ;
+  background-color: rgb(0, 0, 0);
+  margin: 20px;
+}
+.m{
+  position: fixed;
+  top: 19%;
+  padding-left: 23%;
+  padding-right:30%;
 }
 
-
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 </style>

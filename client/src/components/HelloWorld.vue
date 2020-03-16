@@ -20,7 +20,7 @@
           href="https://github.com/venu-naredla/PROJECT"
           target="_blank"
           rel="noopener"
-          > <i class="fa fa-grav"></i>&nbsp;GitHub</a
+          > <i class="fab fa-github"></i>&nbsp;GitHub</a
         >
       </li>
       <li>
