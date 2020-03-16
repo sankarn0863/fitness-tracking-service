@@ -16,7 +16,6 @@
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -28,27 +27,28 @@ li {
 #app {
  
   position:absolute;
-  top: 12%;
-  left: 22%;
+  top: 5%;
+   right:1%;
+   left: 1%;
+   bottom: 1%;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align:center;
   color:white;
-}
+ 
 
+}
 #nav {
   position:fixed;
   padding: 10px;
   bottom: 94%;
   left:39%;
-
-
+  
   a {
     text-decoration: none;
     font-weight: bold;
     color:white;
-
     &.router-link-exact-active {
       color:rgb(223, 90, 1);
     }
@@ -60,5 +60,4 @@ li {
     color:rgb(223, 90, 1);
   }
 }
-
 </style>

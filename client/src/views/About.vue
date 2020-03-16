@@ -4,7 +4,7 @@
   </div>
 </template>
 <style>
-.v{
+.v {
   position: fixed;
   top: 40%;
   left: 40.5%;

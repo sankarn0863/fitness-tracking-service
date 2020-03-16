@@ -50,11 +50,6 @@ export default {
     msg: String
   }
 };
-
-
-
-
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -88,7 +83,6 @@ hello{
   position:absolute;
   top: 60%;
 }
-
 p{
   position: fixed;
   top: 55%;
@@ -100,7 +94,5 @@ p{
   top: 46%;
   font-size: 38px;
   left: 28%;
-
 }
-
 </style>
