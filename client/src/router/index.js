@@ -10,7 +10,7 @@ const routes = [
     name: "Home",
     component: Home
   },
-  {
+  { 
     path: "/dash",
     name: "Signin",
     component: dashboard
