@@ -1,4 +1,15 @@
 <template>
+<div>
+    <div id="nav">
+      <ul>
+      
+      <li><router-link to="/">Home</router-link></li> 
+      <li><router-link to="/login">Sign&nbsp;up/Login</router-link></li> 
+      <li><router-link to="/instruction">Instructor&nbsp;Blog</router-link></li>  
+      <li><router-link to="/about">About</router-link></li>
+      
+     </ul>
+    </div>
   <article>
     <div class="container" :class="{ 'sign-up-active': signUp }">
       <div class="overlay-container">
@@ -40,6 +51,7 @@
       </form>
     </div>
   </article>
+  </div>
 </template>
 
 <script>
@@ -61,6 +73,7 @@ article {
   color: black;
   font-size: 16px;
   padding-top:6% ;
+  padding-left: 20%;
 }
 .container {
   position: relative;
@@ -69,7 +82,7 @@ article {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to bottom, white, white);
+  background-color:transparent;;
   .overlay-container {
     position: absolute;
     top: 0;
@@ -87,7 +100,7 @@ article {
     width: 200%;
     background-image: url(vlog.jpg);
     background-size: cover;
-    color: rgb(255, 255, 255);
+    color: rgba(253, 253, 253, 0);
     transform: translateX(0);
     transition: transform 0.5s ease-in-out;
   }
@@ -129,11 +142,12 @@ a {
 }
 button {
   border-radius: 20px;
-  border: 1px solid black;
-  background-color: rgb(10, 10, 9);
-  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: rgb(245, 94, 7);
+  color: rgb(12, 12, 12);
   font-size: 1rem;
   font-weight: bold;
+  font-family:'Roboto', sans-serif;
   padding: 10px 40px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -148,9 +162,9 @@ button {
 }
 button.invert {
   position: absolute;
-  top: 70.5%;
-  background-color: black;
-  border-color: black;
+  top: 96%;
+  background-color: rgb(252, 77, 8);
+  border-color: rgb(253, 77, 7);
 }
 form {
   position: absolute;

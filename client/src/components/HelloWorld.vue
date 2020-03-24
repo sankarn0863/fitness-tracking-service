@@ -20,7 +20,7 @@
           href="https://github.com/venu-naredla/PROJECT"
           target="_blank"
           rel="noopener"
-          > <i class="fa fa-grav"></i>&nbsp;GitHub</a
+          ><i class="fab fa-github"></i>&nbsp;GitHub</a
         >
       </li>
       <li>
@@ -61,7 +61,7 @@ export default {
 <style scoped lang="scss">
 h3 {
   margin: 40px 0 0;
-  position: fixed;
+  position: absolute;
   top: 66%;
   left: 46%;
   font-size: 16px;
@@ -69,7 +69,7 @@ h3 {
 ul {
   list-style-type: none;
   padding: 0;
-  position: fixed;
+  position:absolute;
   top:75%;
   left:40%
 }
@@ -90,13 +90,13 @@ hello{
 }
 
 p{
-  position: fixed;
+  position: absolute;
   top: 55%;
   font-size: 17px;
   left: 23%;
 }
 .venu{
-   position: fixed;
+   position: absolute;
   top: 46%;
   font-size: 38px;
   left: 28%;

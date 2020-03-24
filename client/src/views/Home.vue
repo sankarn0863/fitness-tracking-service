@@ -1,5 +1,15 @@
 <template>
   <div class="home">
+        <div id="nav">
+      <ul>
+      
+      <li><router-link to="/">Home</router-link></li> 
+      <li><router-link to="/login">Sign&nbsp;up/Login</router-link></li> 
+      <li><router-link to="/instruction">Instructor&nbsp;Blog</router-link></li>  
+      <li><router-link to="/about">About</router-link></li>
+      
+     </ul>
+    </div>
 
     <img class="ve" src="../assets/logo.png"  width="185" height="auto">
     <HelloWorld msg="Welcome to Naredlav1 Fitness Tracker App" />
@@ -19,7 +29,7 @@ export default {
 </script>
 <style>
 .ve{
-  position: fixed;
+  position: absolute;
   left: 46%;
   top: 15%;
 }
