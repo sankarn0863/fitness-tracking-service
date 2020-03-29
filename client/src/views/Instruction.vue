@@ -1,16 +1,19 @@
 <template>
   <div id="app2">
-        <div id="nav">
-      <ul>
+
+   <div id="nav">
+      <ul class="a1">
       
-      <li><router-link to="/">Home</router-link></li> 
-      <li><router-link to="/login">Sign&nbsp;up/Login</router-link></li> 
-      <li><router-link to="/instruction">Instructor&nbsp;Blog</router-link></li>  
-      <li><router-link to="/about">About</router-link></li>
+      <li class="a2"><router-link to="/">Home</router-link></li> 
+      <li class="a2"><router-link to="/login">Sign&nbsp;up/Login</router-link></li> 
+      <li class="a2"><router-link to="/instruction">Instructor&nbsp;Blog</router-link></li>  
+      <li class="a2"><router-link to="/about">About</router-link></li>
       
      </ul>
-    </div>
+     <div class="con">
     <article class="media">
+ 
+    
       <figure class="media-left">
         <p class="image is-64x64">
           <img src="../assets/v.png" />
@@ -104,19 +107,28 @@
           </p>
         </div>
       </div>
-    </article>
-  </div>
+      </article>
+      </div>
+      </div>
+</div>
 </template>
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 article {
   font-family: "Roboto", sans-serif;
-}
 
-.media {
-  position: relative;
+
+}
+.con {
+  position: fixed;
   padding-right: 2%;
-  padding-top: 3%;
+  padding-top: 0%;
   left: 2%;
+  
+ 
+}
+.a1{
+  position: relative;
+  padding-top:0%;
 }
 </style>

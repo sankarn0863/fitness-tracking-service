@@ -1,5 +1,6 @@
 <template>
-<div>
+<div class="login" @submit.prevent="login">
+    {{error}}
     <div id="nav">
       <ul>
       
@@ -15,14 +16,14 @@
       <div class="overlay-container">
         <div class="overlay">
           <div class="overlay-left">
-            <h2>Hello USER!</h2>
+            <h2 class="v1">Hello USER!</h2>
             <p>Please login with your personal info</p>
             <button class="invert" id="signIn" @click="signUp = !signUp">
               Sign In
             </button>
           </div>
           <div class="overlay-right">
-            <h2>Welcome Back!</h2>
+            <h2 class="v1">Welcome Back!</h2>
             <p>Please enter your personal details</p>
             <button class="invert" id="signUp" @click="signUp = !signUp">
               Sign Up
@@ -30,8 +31,8 @@
           </div>
         </div>
       </div>
-      <form class="sign-up" action="#">
-        <h2>SIGN UP for NaredlaV1</h2>
+      <form class="sign-up">
+        <h2>SIGN UP</h2>
         <div>Use your Email ID for registration</div>
         <input type="text" placeholder="Name" />
         <input type="email" placeholder="Email" />
@@ -41,13 +42,15 @@
 
         <button>Sign up</button>
       </form>
-      <form class="sign-in" action="#">
+      <form class="sign-in">
         <h2>SIGN IN</h2>
-        <div>Use your account</div>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
+        <div><p>Use your account</p></div>
+        <input type="email" placeholder="Email" required="required" v-model="email">
+        <input type="password" placeholder="Password" required="required" v-model="password">
         <a>Forgot your password?</a>
-        <router-link to="/dash"><button>Sign in</button></router-link>
+        <button>
+          Sign in
+        </button>
       </form>
     </div>
   </article>
@@ -55,17 +58,34 @@
 </template>
 
 <script>
+import { Login } from "../models/Users";
 export default {
-  data: () => {
-    return {
-      signUp: false
-    };
-  }
-};
+ 
+    data(){
+        return {
+          signUp: false,
+            email: '',
+            password: '',
+            error: ''
+        }
+    },
+    methods: {
+        login(){
+            try {
+                Login(this.email, this.password);
+                this.$router.push('../Components/dashboard');
+            } catch (error) {
+                this.error = error;
+            }
+        }
+    }
+}
 </script>
+
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap");
 article {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -73,7 +93,7 @@ article {
   color: black;
   font-size: 16px;
   padding-top:6% ;
-  padding-left: 20%;
+  padding-left: 0%;
 }
 .container {
   position: relative;
@@ -82,7 +102,7 @@ article {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
-  background-color:transparent;;
+  background-color:transparent;
   .overlay-container {
     position: absolute;
     top: 0;
@@ -119,7 +139,7 @@ article {
     transition: transform 0.5s ease-in-out;
   }
   .overlay-left {
-    @include overlays(-20%);
+    @include overlays(0);
   }
   .overlay-right {
     @include overlays(0);
@@ -128,22 +148,26 @@ article {
 }
 h2 {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 25px;
+  color: rgb(255, 255, 255);
 }
 p {
+  font-family: 'Open Sans', sans-serif;
   margin: 20px 0 30px;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
 }
 a {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   margin: 15px 0;
   font-size: 1rem;
 }
 button {
   border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0);
-  background-color: rgb(245, 94, 7);
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   color: rgb(12, 12, 12);
   font-size: 1rem;
   font-weight: bold;
@@ -162,9 +186,9 @@ button {
 }
 button.invert {
   position: absolute;
-  top: 96%;
-  background-color: rgb(252, 77, 8);
-  border-color: rgb(253, 77, 7);
+  top: 101%;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
 }
 form {
   position: absolute;
@@ -177,25 +201,25 @@ form {
   width: calc(65.6% - 120px);
   height: calc(100% - 0px);
   text-align: center;
-  background: linear-gradient(to bottom, #fff7f7, rgb(117, 111, 111));
+  background-color:rgb(223, 90, 1);
   transition: all 0.5s ease-in-out;
   div {
     font-size: 1rem;
   }
   input {
-    background-color: rgba(255, 255, 255, 0.836);
+    background-color: rgb(245, 245, 245);
     border: solid;
     padding: 8px 15px;
     margin: 6px 0;
     width: calc(100% - 30px);
     border-radius: 15px;
-    border-bottom: 1px solid rgb(10, 10, 10);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4), 0 -1px 1px rgb(5, 5, 5),
-      0 1px 0 rgb(10, 9, 9);
+    border-bottom: 1px solid rgb(241, 110, 2);
+    box-shadow: inset 0 1px 2px rgb(255, 255, 255), 0 -1px 1px rgb(255, 102, 0),
+      0 1px 0 rgb(255, 126, 5);
     overflow: hidden;
     &:focus {
       outline: none;
-      background-color: transparent;
+      background-color: rgb(255, 255, 255);
     }
   }
 }
@@ -205,9 +229,9 @@ form {
 }
 .sign-up {
   left: 0;
-  top: -5%;
+  top: -2%;
   z-index: 1;
-  opacity: 0;
+  opacity: 5;
 }
 .sign-up-active {
   .sign-in {

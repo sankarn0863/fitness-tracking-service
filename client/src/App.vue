@@ -32,8 +32,7 @@ li {
 }
 #nav {
   position:absolute;
-  padding: 10px;
-  bottom: 94%;
+  padding: 5px;
   left:39%;
   
   a {

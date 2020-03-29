@@ -1,7 +1,7 @@
 const Users = [
-    { Name: 'VENU', Password: '2020', Email: 'naredlav1@newpaltz.edu' },
-    { Name: 'sankar', Password: '2020', Email: 'naredlav1@hawkmail.newpaltz.edu' },
-    
+    { Name: 'VENU', Password: '0863', Email: 'naredlav1@newpaltz.edu' },
+    { Name: 'sankar', Password: '0863', Email: 'naredlav1@hawkmail.newpaltz.edu' },
+    { Name: 'Naredla', Password: '0863', Email: 'v1@gmail.com' }
 ];
 
 export let CurrentUser = null;

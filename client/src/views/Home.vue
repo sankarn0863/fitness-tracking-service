@@ -13,7 +13,9 @@
 
     <img class="ve" src="../assets/logo.png"  width="185" height="auto">
     <HelloWorld msg="Welcome to Naredlav1 Fitness Tracker App" />
+
   </div>
+
 </template>
 <script>
 
