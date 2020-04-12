@@ -7,7 +7,7 @@
   <div class="card">
   <div class="card-image">
     <figure class="image is-4by3">
-      <img src="../assets/dash.jpg" width="auto" height="auto">
+      <img src="../assets/background.jpg" width="auto" height="auto">
     </figure>
   </div>
   <div class="card-content">

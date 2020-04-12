@@ -4,7 +4,8 @@
       <ul>
       
       <li><router-link to="/">Home</router-link></li> 
-      <li><router-link to="/login">Sign&nbsp;up/Login</router-link></li> 
+      <li><router-link to="/login">Login</router-link></li> 
+      <li><router-link to="/reg">Register</router-link></li> 
       <li><router-link to="/instruction">Instructor&nbsp;Blog</router-link></li>  
       <li><router-link to="/about">About</router-link></li>
       

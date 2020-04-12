@@ -3,11 +3,11 @@
 
    <div id="nav">
       <ul class="a1">
-      
-      <li class="a2"><router-link to="/">Home</router-link></li> 
-      <li class="a2"><router-link to="/login">Sign&nbsp;up/Login</router-link></li> 
-      <li class="a2"><router-link to="/instruction">Instructor&nbsp;Blog</router-link></li>  
-      <li class="a2"><router-link to="/about">About</router-link></li>
+      <li><router-link to="/">Home</router-link></li> 
+      <li><router-link to="/login">Login</router-link></li> 
+      <li><router-link to="/reg">Register</router-link></li> 
+      <li><router-link to="/instruction">Instructor&nbsp;Blog</router-link></li>  
+      <li><router-link to="/about">About</router-link></li>
       
      </ul>
      <div class="con">

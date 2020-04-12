@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import dashboard from"../components/dashboard.vue";
+import Admin_dashboard from"../components/Admin_dashboard.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -12,8 +13,13 @@ const routes = [
   },
   { 
     path: "/dash",
-    name: "Signin",
+    name: "Dashboard",
     component: dashboard
+  },
+  { 
+    path: "/Admin",
+    name: "Dashboard_Admin",
+    component: Admin_dashboard
   },
   {
     path: "/about",
@@ -21,9 +27,19 @@ const routes = [
     component: () => import("../views/About.vue")
   },
   {
+    path: "/click",
+    name: "Click Here",
+    component: () => import("../views/Register.vue")
+  },
+  {
     path: "/login",
-    name: "Sign up/Login",
+    name: "Login",
     component: () => import("../views/Login.vue")
+  },
+  {
+    path: "/reg",
+    name: "Register",
+    component: () => import("../views/Register.vue")
   },
   {
     path: "/instruction",
