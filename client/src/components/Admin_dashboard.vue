@@ -1,323 +1,219 @@
 <template>
-<section class="nav>">
- 
-<div class="profile">
-  <div class="columns">
-    <div class="column">
-  <div class="card">
-  <div class="card-image">
-    <figure class="image is-4by3">
-      <img src="../assets/background.jpg" width="auto" height="auto">
-    </figure>
-  </div>
-  <div class="card-content">
-    <div class="media">
-      <div class="media-left">
-        <figure class="image is-48x48">
-          <img src="../assets/venudp.jpg">
+<div class="admin">
+  <section>
+       <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="container">
+      <div class="navbar-brand">
+         <router-link to="AdminDashboard"><img src=".././assets/logo.png" width="100" height="auto"></router-link>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/Online">Online Users </a> 
+            <a class="navbar-item" href="/Posts"> Posts Active </a>
+            <a class="navbar-item" href="/Accounts">Edit Accounts</a>
+        </div>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <figure class="image is-32x32">
+              <img class="is-rounded" src=".././assets/Blog-post/blog1.jpg">
+            </figure>
+          </div>
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-light">
+                <router-link to="login">Logout</router-link>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>  
+     <div class="container">
+     <div class="columns">
+      <div class="column is-8">
+        <div class="card">
+     
+      <div class="card-content">
+        <div class="content">
+          <span  v-for="item in postData" :key="item.message">
+          <div class="media">
+          <div class="media-left is-4">
+            <figure class="image is-64x64">
+              <img v-bind:src="item.File" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="media-content is-6">
+            <p class="title is-4"> {{item.Title}}</p>
+            <p class="subtitle is-6">{{item.Desc}}</p>
+          </div>
+          <div class="is-2">
+            <div class="dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                 <span class="icon is-small">
+        <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+      </span>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                <div class="dropdown-content">
+                   <div class="dropdown-item dropclass"  v-on:click="InActive(item)" style="border-bottom:1px solid #ccc">
+                    InActive
+                  </div>
+                   <div class="dropdown-item dropclass"  v-on:click="Remove(item)">
+                    Remove
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="columns">
+            <div class="column is-6">
+              {{item.uploaderName}}
+            </div>
+            <div class="column is-6 has-text-right">
+              <time datetime="2016-1-1">{{item.Time}}</time>
+            </div>
+          </div>
+          <hr>
+          </span>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="column is-4">
+        <div class="card">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src=".././assets/Blog-post/blog1.jpg" alt="Placeholder image">
         </figure>
       </div>
-      <div class="media-content">
-        <p class="title is-4">Venu Naredla</p>
-        <p class="subtitle is-6">@naredlav1</p>
+      <div class="card-content">
+        <div class="content">
+          <div class="columns">
+            <div class="column is-4">
+              <b>Name</b>
+            </div>
+            <div class="column is-8">
+              ADMIN
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-4">
+              <b>Email</b>
+            </div>
+            <div class="column is-8">
+              naredlav1
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-4">
+              <b>Contact</b>
+            </div>
+            <div class="column is-8">
+              12561
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="content">
-      Studying Masters at SUNY New Paltz,New York,NY-12561 <a>@SUNY</a>.
-      <a href="#">#Workout</a> <a href="#">#Fitness_tracker</a>
-      <br>
-      <time datetime="03-10-2020">11:09 PM - 10 Mar 2020</time>
-    </div>
-  </div>
-</div>
-</div>
-  </div>
-  </div>
-  <div class="column">
-    <div class="m">
-    <article class="media">
-  <figure class="media-left">
-    <p class="image is-64x64">
-      <img src="../assets/venudp.jpg">
-    </p>
-  </figure>
-  <div class="media-content">
-    <div class="content">
-      <p>
-        <strong>Venu Naredla</strong> <small>@naredlav1</small> <small>15m</small>
-        <br>
-       Hello, this is my Front end of the Fitness Tracker Application, need to do the further development on server side.
-      </p>
-    </div>
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-reply"></i></span>
-        </a>
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-        </a>
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-heart"></i></span>
-        </a>
       </div>
-    </nav>
-  </div>
-  <div class="media-right">
-    <button class="delete"></button>
-  </div>
-</article>
- <article class="media">
-  <figure class="media-left">
-    <p class="image is-64x64">
-      <img src="../assets/nitin.jpg">
-    </p>
-  </figure>
-  <div class="media-content">
-    <div class="content">
-      <p>
-        <strong>Prabhas</strong> <small>@nitinprabha</small> <small>15m</small>
-        <br>
-       Hey Dude, I'm busy with tapsee pannu and kajal aggarwal, will start working out soon buddy!
-      </p>
+    </div> 
     </div>
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-reply"></i></span>
-        </a>
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-        </a>
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-heart"></i></span>
-        </a>
-      </div>
-    </nav>
+  </section>
   </div>
-  <div class="media-right">
-    <button class="delete"></button>
-  </div>
-</article>
- <article class="media">
-  <figure class="media-left">
-    <p class="image is-64x64">
-      <img src="../assets/dorydp.jpg">
-    </p>
-  </figure>
-  <div class="media-content">
-    <div class="content">
-      <p>
-        <strong>Md Dory Khan</strong> <small>@iamdorykhan</small> <small>15m</small>
-        <br>
-       Asalam valekum Prabhas and Venu Bhai!!
-      </p>
-    </div>
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-reply"></i></span>
-        </a>
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-        </a>
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-heart"></i></span>
-        </a>
-      </div>
-    </nav>
-  </div>
-  <div class="media-right">
-    <button class="delete"></button>
-  </div>
-</article>
- <article class="media">
-  <figure class="media-left">
-    <p class="image is-64x64">
-      <img src="../assets/venudp.jpg">
-    </p>
-  </figure>
-  <div class="media-content">
-    <div class="content">
-      <p>
-        <strong>Venu Naredla</strong> <small>@naredlav1</small> <small>15m</small>
-        <br>
-       Hi @nitinprabha, how are you brother?, howz the shoot going on by the way? Sahoo is a visual wonder brother keep it up!
-      </p>
-    </div>
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-reply"></i></span>
-        </a>
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-        </a>
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-heart"></i></span>
-        </a>
-      </div>
-    </nav>
-  </div>
-  <div class="media-right">
-    <button class="delete"></button>
-  </div>
-</article>
-</div>
-</div>
- <div class="tabs is-centered">
-  <ul>
-    <li>
-      <a>
-        <span class="icon is-small"><i class="fas fa-users" aria-hidden="true"></i></span>
-        <span>Friends</span>
-      </a>
-    </li>
-    <li>
-      <a>
-        <span class="icon is-small"><i class="fas fa-search" aria-hidden="true"></i></span>
-        <span>Search</span>
-      </a>
-    </li>
-    <li>
-      <a>
-        <span class="icon is-small"><i class="fas fa-comments" aria-hidden="true"></i></span>
-        <span>Messages</span>
-      </a>
-    </li>
-    <li>
-      <a href="../">
-        <span class="icon is-small"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span>
-        <span>LOGOUT</span>
-      </a>
-    </li>
-  </ul>
-</div>
-<section class="naredla"> 
-
-<div class="field">
-  <label class="label">Instructor Name</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Enter Initial">
-  </div>
-</div>
-
-<div class="field">
-  <label class="label">Exercise </label>
-  <div class="control has-icons-left has-icons-right">
-    <input class="input is-success" type="text" placeholder="Module " value="Warm up">
-    <span class="icon is-small is-left">
-      <i class="fas fa-dumbbell"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-check"></i>
-    </span>
-  </div>
-  <p class="help is-success">Module is available</p>
-</div>
-
-<div class="field">
-  <label class="label">Session</label>
-  <div class="control">
-    <div class="select">
-      <select>
-        <option><i class="fa fa-globe"></i>Morning Session</option>
-        <option>Evening Session</option>
-      </select>
-    </div>
-  </div>
-</div>
-
-<div class="field">
-  <label class="label">Work Out Type</label>
-  <div class="control">
-    <div class="select">
-      <select>
-        <option>Cycling</option>
-        <option>Running</option>
-        <option>Jogging</option>
-        <option>Swimming</option>
-        <option>Cardio</option>
-        <option>Power Lifting</option>
-        <option>Strength</option>
-      </select>
-    </div>
-  </div>
-</div>
-
-<div class="field">
-  <label class="label">Workout Time</label>
-  <div class="control">
-    <div class="select">
-      <select>
-        <option>10 MINS</option>
-        <option>20 MINS</option>
-        <option>30 MINS</option>
-        <option>45MINS</option>
-        <option>1 Hr</option>
-        <option>1:30 Hr</option>
-      </select>
-    </div>
-  </div>
-</div>
-<div class="field is-grouped">
-  <div class="control">
-    <button class="button is-link">Submit</button>
-  </div>
-  <div class="control">
-    <button class="button is-link is-light">Cancel</button>
-  </div>
-</div>
-<div class="file has-name is-right">
-  <label class="file-label">
-    <input class="file-input" type="file" name="resume">
-    <span class="file-cta">
-      <span class="file-icon">
-        <i class="fas fa-upload"></i>
-      </span>
-      <span class="file-label">
-        Choose a file
-      </span>
-    </span>
-    <span class="file-name">
-      naredlav1.png
-    </span>
-  </label>
-</div>
-
-</section>
-</section>
 </template>
-<style>
-.naredla{
-  position: relative;
-  top: 0%;
-  left: 1%;
-  padding-right: 80%;
-  padding-bottom: 10%;
-  color: rgb(255, 255, 255);
 
-  
+<script>
+import axios from "axios";
+export default {
+  name: 'HelloWorld',
+  props: {
+    msg: String
+  },
+  data(){
+      return {
+        profile:null,
+        fileBase64: null,
+        postData:  null
+      }
+    },
+    created(){    
+          this.getAllPosts();  
+    },
+    methods:{
+      get_all_posts: function() {  
+        this.$loading(true)
+          axios.get("http://localhost:3000/get_all_posts")    
+           .then((response) => {    
+             this.$loading(false)
+               console.log("Logged in"+JSON.stringify(response)) ;  
+                this.postData=response.data;                  
+            })    
+            .catch((errors) => {  
+              this.$loading(false)  
+                console.log("Internal server error");
+            })
+      },
+      edit_posts: function(data){
+                 this.$loading(true)
+           axios.post("http://localhost:3000/edit_accounts", {data})    
+           .then((response) => {    
+               console.log("Logged in"+JSON.stringify(response)) ;  
+                this.$loading(false)
+                 this.$alert("Account Altered successfully.");
+                this.getAllPosts();                 
+            })    
+            .catch((errors) => {    
+                console.log("Internal server Error");
+            });
+      },
+      deactivate_post: function(data){
+         this.$loading(true)
+           axios.post("http://localhost:3000/deactivate_post", {data})    
+           .then((response) => {    
+               console.log("Logged in"+JSON.stringify(response)) ;  
+                this.$loading(false)
+                 this.$alert("Post deactivated successfully.");
+                this.getAllPosts();                 
+            })    
+            .catch((errors) => {    
+                console.log("Internal server Error");
+            });
+      },
+            Active_users: function(data){
+         this.$loading(true)
+           axios.post("http://localhost:3000/activate_post", {data})    
+           .then((response) => {    
+               console.log("Logged in"+JSON.stringify(response)) ;  
+                this.$loading(false)
+                 this.$alert("Post activated successfully.");
+                this.getAllPosts();                 
+            })    
+            .catch((errors) => {    
+                console.log("Internal server Error");
+            });
+      },
+      delete: function(data){
+        this.$loading(true)
+           axios.post("http://localhost:3000/delete_post", {data})    
+           .then((response) => {    
+             this.$loading(false)
+               console.log("Logged in"+JSON.stringify(response)) ;  
+               this.$alert("Post is removed.");
+                this.getAllPosts();                    
+            })    
+            .catch((errors) => {    
+              this.$loading(false)
+                console.log("Internal Server Error");
+            })
+      }
+    }
 }
-.nav{
-  position: fixed;
-  padding-top: 1%;
-}
-.card{
-  position: absolute;
-  top: 15%;
-  left: 70%;
-  border: dotted;
-  border-color:rgba(5, 3, 3, 0.308) ;
-  background-color: rgb(0, 0, 0);
-  margin: 20px;
-}
-.m{
-  position: fixed;
-  top: 19%;
-  padding-left: 23%;
-  padding-right:30%;
-}
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-</style>
+</script>

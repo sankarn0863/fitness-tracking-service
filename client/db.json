@@ -1,0 +1,20 @@
+{
+  "todos": [
+    {
+      "id": 0,
+      "name": "Go to the gym"
+    },
+    {
+      "id": 1,
+      "name": "DO some exersice"
+    },
+    {
+      "id": 2,
+      "name": "Get some friends"
+    },
+    {
+      "name": "Buy some time",
+      "id": 3
+    }
+  ]
+}
