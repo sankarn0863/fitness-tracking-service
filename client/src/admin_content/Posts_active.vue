@@ -62,7 +62,7 @@
         </div>
           <div class="columns">
             <div class="column is-6">
-              {{item.uploaderName}}
+              {{item.upload_Name}}
             </div>
             <div class="column is-6 has-text-right">
               <time datetime="2016-1-1">{{item.Time}}</time>

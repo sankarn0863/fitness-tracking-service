@@ -33,19 +33,19 @@
             <thread>
                 <tr>
                     <th>S.No</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                    <th>Phone Num</th>
+                    <th>username</th>
+                    <th>Name</th>
+                    <th>MailID</th>
+                    <th>PhoneNo</th>
                 </tr>
             </thread>
             <body>
                 <tr  v-for="(item, index) in items" :key="item.message">
                     <th>{{index+1}}</th>
-                    <td>{{item.First_Name}} </td>
-                    <td>{{item.Last-Name}}</td>
-                    <td>{{item.Email}}</td>
-                    <td>{{item.Phone}}</td>
+                    <td>{{item.User_Name}} </td>
+                    <td>{{item.Name}}</td>
+                    <td>{{item.MailID}}</td>
+                    <td>{{item.PhoneNo}}</td>
                     <td>
                          <a href="javascript:void(0)" type="button" v-on:click="active_user(item)" class = "button is-primary is-outlined">
                             <span>Activate</span>
