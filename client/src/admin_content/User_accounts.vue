@@ -97,7 +97,7 @@ export default {
                 })    
                 .catch((errors) => {  
                     this.$loading(false) 
-                    console.log("Error: "+errors);    
+                    console.log("Error: sOMETHING WENT WRONG"+errors);    
                 })
         },
         deactivated_user: function(data){
@@ -110,7 +110,7 @@ export default {
                 })    
                 .catch((errors) => {  
                     this.$loading(false)  
-                    console.log("Error: "+errors);    
+                    console.log("Error:SOMETHING WENT WRONG "+errors);    
                 })
         },
          Delete: function(data){
@@ -123,7 +123,7 @@ export default {
                 })    
                 .catch((errors) => { 
                     this.$loading(false)   
-                    console.log("Error: "+errors);    
+                    console.log("Error:SOMETHING WENT WRONG  "+errors);    
                 })
         }
     }

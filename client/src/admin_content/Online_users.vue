@@ -84,7 +84,7 @@ export default {
         items: null
     }),
    created(){       
-        this.getAllUser();
+        this.get_all_users();
     },
     methods:{
         get_all_users:function(){
