@@ -38,6 +38,13 @@
     </div>
   </div>
 </div>
+<div>
+   <Autocomplete :items="users"
+      filterby="name"
+      @change="onChange"
+      title="Search Users"
+      @selected="user_selected"/>
+
   </div>
 </template>
 <style>
@@ -52,4 +59,29 @@
   margin: 20px;
 }
 </style>
-
+<script>
+import axios from "axios";
+import Autocomplete from "@/components/Auto_complete.vue";
+export default {
+  name: 'Auto',
+  mounted() {
+    this.users = users;
+  },
+  data() {
+    return {
+      users: []
+    };
+  },
+  methods: {
+    user_selected(user) {
+      console.log(`user Selected:\nid: ${user.id}\nname: ${user.name}`);
+    },
+    onChange(value) {
+      console.log(value);
+    }
+  },
+  components: {
+    Autocomplete
+  }
+}
+</script>
